@@ -13,7 +13,7 @@ const App = () => {
   const projects = [
     {
       title: "Brand Identity Design",
-      image: "/api/placeholder/800/800",
+      image: "/images/",
       description:
         "Complete brand identity including logo design, color palette, and typography guidelines for a technology startup.",
       thumbnailImage: "/api/placeholder/400/400",
@@ -91,25 +91,46 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-100 to-white">
-      {/* All the sections from before remain exactly the same */}
       <nav className="bg-white shadow-sm sticky top-0 z-40">
-        {/* Navigation content */}
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex items-center h-16">
+            <div className="flex items-center space-x-3">
+              <img
+                src="/api/placeholder/40/40"
+                alt="Your Logo"
+                className="h-10 w-10"
+              />
+              <span className="text-xl font-bold text-gray-900">Luke</span>
+            </div>
+
+            <div className="hidden md:flex space-x-8 ml-auto">
+              <a href="#about" className="text-gray-700 hover:text-gray-900">
+                About
+              </a>
+              <a
+                href="#experience"
+                className="text-gray-700 hover:text-gray-900"
+              >
+                Experience
+              </a>
+              <a href="#projects" className="text-gray-700 hover:text-gray-900">
+                Projects
+              </a>
+              <a href="#contact" className="text-gray-700 hover:text-gray-900">
+                Contact
+              </a>
+            </div>
+          </div>
+        </div>
       </nav>
 
       <section className="pt-20 pb-32 bg-transparent transition-opacity duration-1000">
-        <div className="max-w-4xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col items-center text-center">
-            <div className="flex items-center gap-6 mb-6">
-              <img
-                src="/api/placeholder/120/120"
-                alt="Luke's Portrait"
-                className="rounded-full w-28 h-28 object-cover"
-              />
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
-                Hi, I'm Luke
-              </h1>
-            </div>
-            <p className="text-xl text-gray-600 mb-2">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+              Hi, I'm Luke
+            </h1>
+            <p className="text-xl text-gray-600 mb-3">
               Computer Programmer & Graphic Designer
             </p>
             <div className="inline-block bg-emerald-100 px-4 py-1 rounded-full">
@@ -122,133 +143,132 @@ const App = () => {
       </section>
 
       <section id="about" className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">About Me</h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <p className="text-gray-600">
-                I am graduating in 2025 with a Bachelor of Science in Computer
-                Science and a Bachelor of Arts in Graphic Design from Creighton
-                University in Omaha, NE. Currently based in Omaha, I am open to
-                remote work or relocation opportunities.
-              </p>
+
+          <div className="mb-12">
+            <p className="text-gray-600">
+              I am graduating in 2025 with a Bachelor of Science in Computer
+              Science and a Bachelor of Arts in Graphic Design from Creighton
+              University in Omaha, NE. Currently based in Omaha, I am open to
+              remote work or relocation opportunities.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div>
+              <h3 className="font-bold mb-4">
+                Programming Languages & Frameworks
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Python",
+                  "JavaScript",
+                  "HTML/CSS",
+                  "Java",
+                  "SQL",
+                  "React",
+                  "Tailwind",
+                  "Django",
+                  "Git",
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="bg-blue-50 px-3 py-1 rounded-full text-sm"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
 
-            <div className="space-y-8">
-              <div>
-                <h3 className="font-bold mb-4">
-                  Programming Languages & Frameworks
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    "Python",
-                    "JavaScript",
-                    "HTML/CSS",
-                    "Java",
-                    "SQL",
-                    "React",
-                    "Tailwind",
-                    "Django",
-                    "Git",
-                  ].map((skill) => (
-                    <span
-                      key={skill}
-                      className="bg-blue-50 px-3 py-1 rounded-full text-sm"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+            <div>
+              <h3 className="font-bold mb-4">Programming Skills</h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Full Stack Web Development",
+                  "Data Structures",
+                  "Algorithms",
+                  "UI/UX Design",
+                  "Responsive Design",
+                  "Version Control",
+                  "Agile Development",
+                  "Team Collaboration",
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="bg-blue-50 px-3 py-1 rounded-full text-sm"
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
+            </div>
 
-              <div>
-                <h3 className="font-bold mb-4">Programming Skills</h3>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    "Full Stack Web Development",
-                    "Data Structures",
-                    "Algorithms",
-                    "UI/UX Design",
-                    "Responsive Design",
-                    "Version Control",
-                    "Agile Development",
-                    "Team Collaboration",
-                  ].map((skill) => (
-                    <span
-                      key={skill}
-                      className="bg-blue-50 px-3 py-1 rounded-full text-sm"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+            <div>
+              <h3 className="font-bold mb-4">Creative Software</h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Photoshop",
+                  "Illustrator",
+                  "Figma",
+                  "Canva",
+                  "Affinity",
+                  "Final Cut Pro",
+                  "Logic Pro",
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="bg-blue-50 px-3 py-1 rounded-full text-sm"
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
+            </div>
 
-              <div>
-                <h3 className="font-bold mb-4">Creative Software</h3>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    "Photoshop",
-                    "Illustrator",
-                    "Figma",
-                    "Canva",
-                    "Affinity",
-                    "Final Cut Pro",
-                    "Logic Pro",
-                  ].map((skill) => (
-                    <span
-                      key={skill}
-                      className="bg-blue-50 px-3 py-1 rounded-full text-sm"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+            <div>
+              <h3 className="font-bold mb-4">Creative Skills</h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Branding",
+                  "Logo Design",
+                  "Social Media",
+                  "Document Design",
+                  "Print Design",
+                  "Desktop Publishing",
+                  "Video Editing",
+                  "Photography",
+                  "Photo Editing",
+                  "Music Production",
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="bg-blue-50 px-3 py-1 rounded-full text-sm"
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
+            </div>
 
-              <div>
-                <h3 className="font-bold mb-4">Creative Skills</h3>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    "Branding",
-                    "Logo Design",
-                    "Social Media",
-                    "Document Design",
-                    "Print Design",
-                    "Desktop Publishing",
-                    "Video Editing",
-                    "Photography",
-                    "Photo Editing",
-                    "Music Production",
-                  ].map((skill) => (
-                    <span
-                      key={skill}
-                      className="bg-blue-50 px-3 py-1 rounded-full text-sm"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <h3 className="font-bold mb-4">Professional Tools</h3>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    "MacOS",
-                    "Windows",
-                    "Microsoft Office",
-                    "Google Workspace",
-                    "Github",
-                  ].map((skill) => (
-                    <span
-                      key={skill}
-                      className="bg-blue-50 px-3 py-1 rounded-full text-sm"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+            <div>
+              <h3 className="font-bold mb-4">Professional Tools</h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "MacOS",
+                  "Windows",
+                  "Microsoft Office",
+                  "Google Workspace",
+                  "Github",
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="bg-blue-50 px-3 py-1 rounded-full text-sm"
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
@@ -256,7 +276,7 @@ const App = () => {
       </section>
 
       <section id="experience" className="py-20 bg-blue-50">
-        <div className="max-w-4xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">Work Experience</h2>
           <div className="space-y-8">
             {workExperience.map((job, index) => (
@@ -283,7 +303,7 @@ const App = () => {
       </section>
 
       <section id="projects" className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">Design Portfolio</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {projects.map((project, index) => (
