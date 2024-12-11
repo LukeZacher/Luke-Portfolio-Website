@@ -338,11 +338,11 @@ const App = () => {
             onClick={(e) => e.stopPropagation()}
           >
            <div className="relative">
-  <img
-    src={`/${import.meta.env.BASE_URL}${selectedProject.image}`}
-    alt={selectedProject.title}
-    className="w-full h-auto rounded-lg"
-  />
+            <img
+              src={`/${import.meta.env.BASE_URL}${selectedProject.image}`}
+              alt={selectedProject.title}
+              className="w-full h-auto rounded-lg"
+            />
               <button
                 onClick={() => setSelectedProject(null)}
                 className="absolute top-4 right-4 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100"
