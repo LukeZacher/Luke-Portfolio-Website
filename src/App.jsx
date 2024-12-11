@@ -12,46 +12,46 @@ const App = () => {
 
   const projects = [
     {
-      title: "Brand Identity Design",
-      image: "/images/",
+      title: "Logo Billboard",
+      image: "/images/Billboard.png",
       description:
-        "Complete brand identity including logo design, color palette, and typography guidelines for a technology startup.",
-      thumbnailImage: "/api/placeholder/400/400",
+        "A part of a brand identity project using a logo I created as a billboard design.",
+      thumbnailImage: "/images/Billboard.png",
     },
     {
-      title: "Editorial Layout",
-      image: "/api/placeholder/800/1200",
+      title: "Box Packaging Design",
+      image: "/images/BoxDesign.png",
       description:
-        "Magazine spread design featuring custom typography and photo editing for a feature article.",
-      thumbnailImage: "/api/placeholder/400/400",
+        "Designed the size and style of a fictional product packaging in Illustrator. The design was later printed and assembled as a physical box.",
+      thumbnailImage: "/images/BoxDesign.png",
     },
     {
-      title: "Social Media Campaign",
-      image: "/api/placeholder/1200/800",
+      title: "Informational Document",
+      image: "/images/BusinessBenefits.png",
       description:
-        "Series of coordinated social media graphics for a product launch campaign.",
-      thumbnailImage: "/api/placeholder/400/400",
+        "Clean, professional document going over services the business can provide. The document is printed and handed to clients.",
+      thumbnailImage: "/images/BusinessBenefits.png",
     },
     {
-      title: "Website Redesign",
-      image: "/api/placeholder/1920/1080",
+      title: "Collage",
+      image: "/images/Collage.jpg",
       description:
-        "Complete website redesign including UI/UX improvements and responsive layouts.",
-      thumbnailImage: "/api/placeholder/400/400",
+        "Themed sports collage around the Minensota Timberwolves and their star player, Anthony Edwards. Created using Photoshop",
+      thumbnailImage: "/images/Collage.jpg",
     },
     {
-      title: "Logo Collection",
-      image: "/api/placeholder/800/800",
+      title: "Logo",
+      image: "/images/FFEFLogo.png",
       description:
-        "Collection of logo designs for various clients across different industries.",
-      thumbnailImage: "/api/placeholder/400/400",
+        "New logo variant for a business redesign. Created in Affinity Designer.",
+      thumbnailImage: "/images/FFEFLogo.png",
     },
     {
-      title: "Marketing Materials",
-      image: "/api/placeholder/800/600",
+      title: "Still Life Illustration",
+      image: "/images/StillLife.jpg",
       description:
-        "Print and digital marketing materials including brochures, flyers, and social media assets.",
-      thumbnailImage: "/api/placeholder/400/400",
+        "Still Life illustration made in Illustrator from a source image.",
+      thumbnailImage: "/images/StillLife.jpg",
     },
   ];
 
@@ -96,7 +96,7 @@ const App = () => {
           <div className="flex items-center h-16">
             <div className="flex items-center space-x-3">
               <img
-                src="/api/placeholder/40/40"
+                src="/images/Luke-Logo.svg"
                 alt="Your Logo"
                 className="h-10 w-10"
               />
