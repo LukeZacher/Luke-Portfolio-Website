@@ -96,7 +96,7 @@ const App = () => {
           <div className="flex items-center h-16">
             <div className="flex items-center space-x-3">
               <img
-                src="/images/Luke-Logo.svg"
+                src={`/${import.meta.env.BASE_URL}/images/Luke-Logo.svg`}
                 alt="Your Logo"
                 className="h-10 w-10"
               />
@@ -314,7 +314,7 @@ const App = () => {
               >
                 <div className="aspect-square w-full relative overflow-hidden rounded-lg bg-gray-100">
                   <img
-                    src={project.thumbnailImage}
+                    src={`/${import.meta.env.BASE_URL}${project.thumbnailImage}`}
                     alt={project.title}
                     className="w-full h-full object-cover absolute inset-0"
                   />
@@ -337,12 +337,12 @@ const App = () => {
             className="bg-white p-6 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative">
-              <img
-                src={selectedProject.image}
-                alt={selectedProject.title}
-                className="w-full h-auto rounded-lg"
-              />
+           <div className="relative">
+  <img
+    src={`/${import.meta.env.BASE_URL}${selectedProject.image}`}
+    alt={selectedProject.title}
+    className="w-full h-auto rounded-lg"
+  />
               <button
                 onClick={() => setSelectedProject(null)}
                 className="absolute top-4 right-4 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100"
